@@ -20,9 +20,9 @@ to setup 'postgres' user manually.
 The https://jdbc.postgresql.org/development/development.html
 notes are outdated. Use the following instead.
 
-postgres@host:~$ createuser -d test -P
-postgres@host:~$ createdb -U test test
-
+bin\createuser -d test -P
+bin\createdb -E UTF8 -T template0 -U test test
+bin\createlang plpgsql test
 
 = Other PostgreSQL tips
 
