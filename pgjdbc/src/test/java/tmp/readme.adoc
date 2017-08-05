@@ -15,7 +15,7 @@ to setup 'postgres' user manually.
 	postgres=# alter role postgres with bypassrls;
 	
 
-= pgjdbc with postgres 9.6
+= Setup pgjdbc tests with postgres 9.6
 
 The https://jdbc.postgresql.org/development/development.html
 notes are outdated. Use the following instead.
@@ -23,7 +23,22 @@ notes are outdated. Use the following instead.
 postgres@host:~$ createuser -d test -P
 postgres@host:~$ createdb -U test test
 
+
 = Other PostgreSQL tips
+
+== Setup quick db for pgbench tool
+
+https://wiki.postgresql.org/wiki/Pgbenchtesting
+https://www.postgresql.org/docs/9.6/static/pgbench.html
+
+bin\createuser zemian
+bin\createdb -O zemian zemian
+bin\pgbench -U zemian -i zemian
+bin\pgbench -c 4 -j 2 -T 600 zemian
+
+
+== Getl all tables and row counts
+SELECT relname, n_live_tup FROM pg_stat_user_tables ORDER BY n_live_tup DESC;
 
 == Enable SQL queries monitoring
 :hp-tags: postgres
