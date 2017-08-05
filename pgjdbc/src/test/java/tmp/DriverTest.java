@@ -9,11 +9,22 @@ import java.sql.ResultSet;
 import java.sql.Types;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 /**
  * Created by xbbj5x6 on 8/4/2017.
  */
 public class DriverTest {
+
+    @Test
+    public void test() throws Exception {
+        Driver driver = new Driver();
+        String url = "jdbc:postgresql://localhost/test";
+        try(Connection conn = driver.connect(url, null)) {
+            System.out.println(conn);
+        }
+    }
+
     public static Map<Integer, String> SQL_TYPE_NAMES = getSqlTypeNames();
     public static Map<Integer, String> getSqlTypeNames() {
         Map<Integer, String> result = new HashMap<>();
@@ -31,7 +42,7 @@ public class DriverTest {
     }
 
     @Test
-    public void test() throws Exception {
+    public void testDataTypes() throws Exception {
         Driver driver = new Driver();
         String url = "jdbc:postgresql://localhost/test";
         try(Connection conn = driver.connect(url, null)) {
