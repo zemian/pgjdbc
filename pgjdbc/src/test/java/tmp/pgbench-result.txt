@@ -1,0 +1,13 @@
+xbbj5x6@L328BDS002096US C:\Users\xbbj5x6\apps\postgresql-9.6.3
+> bin\pgbench -c 4 -j 2 -T 600 zemian
+starting vacuum...end.
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 1
+query mode: simple
+number of clients: 4
+number of threads: 2
+duration: 600 s
+number of transactions actually processed: 1090474
+latency average = 2.201 ms
+tps = 1817.566169 (including connections establishing)
+tps = 1817.982616 (excluding connections establishing)
