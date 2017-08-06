@@ -1,0 +1,13 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>zemian</groupId>
+	<artifactId>mypgjdbc</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<dependencies>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.1.5-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+</project>
