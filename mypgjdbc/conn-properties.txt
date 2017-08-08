@@ -1,0 +1,118 @@
+C:\Users\xbbj5x6\apps\jdk180u131\bin\java -ea -Dbuild.properties.relative.path=C:\Users\xbbj5x6\ossdev\pgjdbc-zemian-dev\pgjdbc/.. -Didea.test.cyclic.buffer.size=1048576 -javaagent:C:\Users\xbbj5x6\apps\ideaIU-2017.1.2.win\lib\idea_rt.jar=52349:C:\Users\xbbj5x6\apps\ideaIU-2017.1.2.win\bin -Dfile.encoding=UTF-8 -classpath C:\Users\xbbj5x6\apps\ideaIU-2017.1.2.win\lib\idea_rt.jar;C:\Users\xbbj5x6\apps\ideaIU-2017.1.2.win\plugins\junit\lib\junit-rt.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\charsets.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\deploy.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\ext\access-bridge-64.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\ext\cldrdata.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\ext\dnsns.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\ext\jaccess.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\ext\jfxrt.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\ext\localedata.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\ext\nashorn.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\ext\sunec.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\ext\sunjce_provider.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\ext\sunmscapi.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\ext\sunpkcs11.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\ext\zipfs.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\javaws.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\jce.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\jfr.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\jfxswt.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\jsse.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\management-agent.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\plugin.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\resources.jar;C:\Users\xbbj5x6\apps\jdk180u131\jre\lib\rt.jar;C:\Users\xbbj5x6\ossdev\pgjdbc-zemian-dev\pgjdbc\target\test-classes;C:\Users\xbbj5x6\ossdev\pgjdbc-zemian-dev\pgjdbc\target\classes;C:\Users\xbbj5x6\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\xbbj5x6\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\xbbj5x6\.m2\repository\se\jiderhamn\classloader-leak-test-framework\1.1.1\classloader-leak-test-framework-1.1.1.jar;C:\Users\xbbj5x6\.m2\repository\org\apache\bcel\bcel\6.0\bcel-6.0.jar;C:\Users\xbbj5x6\.m2\repository\com\github\dblock\waffle\waffle-jna\1.7.5\waffle-jna-1.7.5.jar;C:\Users\xbbj5x6\.m2\repository\net\java\dev\jna\jna\4.2.1\jna-4.2.1.jar;C:\Users\xbbj5x6\.m2\repository\net\java\dev\jna\jna-platform\4.2.1\jna-platform-4.2.1.jar;C:\Users\xbbj5x6\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.12\jcl-over-slf4j-1.7.12.jar;C:\Users\xbbj5x6\.m2\repository\org\osgi\org.osgi.enterprise\4.2.0\org.osgi.enterprise-4.2.0.jar;C:\Users\xbbj5x6\.m2\repository\org\osgi\org.osgi.core\4.3.1\org.osgi.core-4.3.1.jar com.intellij.rt.execution.junit.JUnitStarter -ideVersion5 tmp.DriverTest,testDriverPropertyInfo
+ApplicationName=PostgreSQL JDBC Driver required=false
+  description=Name of the Application (backend >= 9.0)
+PGDBNAME=test required=true
+  description=Database name to connect to (may be specified directly in the JDBC URL)
+PGHOST=localhost required=false
+  description=Hostname of the PostgreSQL server (may be specified directly in the JDBC URL)
+PGPORT=/*$mvn.project.property.template.default.pg.port$*/ required=false
+  description=Port of the PostgreSQL server (may be specified directly in the JDBC URL)
+allowEncodingChanges=false required=false
+  description=Allow for changes in client_encoding
+assumeMinServerVersion=null required=false
+  description=Assume the server is at least that version
+autosave=never required=false choices=[always, never, conservative]
+  description=Specifies what the driver should do if a query fails. In autosave=always mode, JDBC driver sets a savepoint before each query, and rolls back to that savepoint in case of failure. In autosave=never mode (default), no savepoint dance is made ever. In autosave=conservative mode, safepoint is set for each query, however the rollback is done only for rare cases like 'cached statement cannot change return type' or 'statement XXX is not valid' so JDBC driver rollsback and retries
+binaryTransfer=true required=false
+  description=Use binary format for sending and receiving data if possible
+binaryTransferDisable= required=false
+  description=Comma separated list of types to disable binary transfer. Either OID numbers or names. Overrides values in the driver default set and values set with binaryTransferEnable.
+binaryTransferEnable= required=false
+  description=Comma separated list of types to enable binary transfer. Either OID numbers or names
+cancelSignalTimeout=10 required=false
+  description=The timeout that is used for sending cancel command.
+connectTimeout=10 required=false
+  description=The timeout value used for socket connect operations.
+currentSchema=null required=false
+  description=Specify the schema to be set in the search-path
+databaseMetadataCacheFields=65536 required=false
+  description=Specifies the maximum number of fields to be cached per connection. A value of {@code 0} disables the cache.
+databaseMetadataCacheFieldsMiB=5 required=false
+  description=Specifies the maximum size (in megabytes) of fields to be cached per connection. A value of {@code 0} disables the cache.
+defaultRowFetchSize=0 required=false
+  description=Positive number of rows that should be fetched from the database when more rows are needed for ResultSet by each fetch iteration
+disableColumnSanitiser=false required=false
+  description=Enable optimization that disables column name sanitiser
+gsslib=auto required=false choices=[auto, sspi, gssapi]
+  description=Force SSSPI or GSSAPI
+hostRecheckSeconds=10 required=false
+  description=Specifies period (seconds) after host statuses are checked again in case they have changed
+jaasApplicationName=null required=false
+  description=Specifies the name of the JAAS system or application login configuration.
+kerberosServerName=null required=false
+  description=The Kerberos service name to use when authenticating with GSSAPI.
+loadBalanceHosts=false required=false
+  description=If disabled hosts are connected in the given order. If enabled hosts are chosen randomly from the set of suitable candidates
+logUnclosedConnections=false required=false
+  description=When connections that are not explicitly closed are garbage collected, log the stacktrace from the opening of the connection to trace the leak source
+loggerFile=null required=false
+  description=File name output of the Logger
+loggerLevel=null required=false choices=[OFF, DEBUG, TRACE]
+  description=Logger level of the driver
+loginTimeout=0 required=false
+  description=Specify how long to wait for establishment of a database connection.
+password=null required=false
+  description=Password to use when authenticating.
+preferQueryMode=extended required=false choices=[extended, extendedForPrepared, extendedCacheEverything, simple]
+  description=Specifies which mode is used to execute queries to database: simple means ('Q' execute, no parse, no bind, text mode only), extended means always use bind/execute messages, extendedForPrepared means extended for prepared statements only, extendedCacheEverything means use extended protocol and try cache every statement (including Statement.execute(String sql)) in a query cache.
+prepareThreshold=5 required=false
+  description=Statement prepare threshold. A value of {@code -1} stands for forceBinary
+preparedStatementCacheQueries=256 required=false
+  description=Specifies the maximum number of entries in per-connection cache of prepared statements. A value of {@code 0} disables the cache.
+preparedStatementCacheSizeMiB=5 required=false
+  description=Specifies the maximum size (in megabytes) of a per-connection prepared statement cache. A value of {@code 0} disables the cache.
+protocolVersion=null required=false choices=[3]
+  description=Force use of a particular protocol version when connecting, currently only version 3 is supported.
+reWriteBatchedInserts=false required=false
+  description=Enable optimization to rewrite and collapse compatible INSERT statements that are batched.
+readOnly=false required=false
+  description=Puts this connection in read-only mode
+receiveBufferSize=-1 required=false
+  description=Socket read buffer size
+replication=null required=false
+  description=Connection parameter passed in startup message, one of 'true' or 'database' Passing 'true' tells the backend to go into walsender mode, wherein a small set of replication commands can be issued instead of SQL statements. Only the simple query protocol can be used in walsender mode. Passing 'database' as the value instructs walsender to connect to the database specified in the dbname parameter, which will allow the connection to be used for logical replication from that database. (backend >= 9.4)
+sendBufferSize=-1 required=false
+  description=Socket write buffer size
+socketFactory=null required=false
+  description=Specify a socket factory for socket creation
+socketFactoryArg=null required=false
+  description=Argument forwarded to constructor of SocketFactory class.
+socketTimeout=0 required=false
+  description=The timeout value used for socket read operations.
+ssl=null required=false
+  description=Control use of SSL (any non-null value causes SSL to be required)
+sslcert=null required=false
+  description=The location of the client's SSL certificate
+sslfactory=null required=false
+  description=Provide a SSLSocketFactory class when using SSL.
+sslfactoryarg=null required=false
+  description=Argument forwarded to constructor of SSLSocketFactory class.
+sslhostnameverifier=null required=false
+  description=A class, implementing javax.net.ssl.HostnameVerifier that can verify the server
+sslkey=null required=false
+  description=The location of the client's PKCS#8 SSL key
+sslmode=null required=false
+  description=Parameter governing the use of SSL
+sslpassword=null required=false
+  description=The password for the client's ssl key (ignored if sslpasswordcallback is set)
+sslpasswordcallback=null required=false
+  description=A class, implementing javax.security.auth.callback.CallbackHandler that can handle PassworCallback for the ssl password.
+sslrootcert=null required=false
+  description=The location of the root certificate for authenticating the server.
+sspiServiceClass=POSTGRES required=false
+  description=The Windows SSPI service class for SPN
+stringtype=null required=false choices=[unspecified, varchar]
+  description=The type to bind String parameters as (usually 'varchar', 'unspecified' allows implicit casting to other types)
+targetServerType=any required=false choices=[any, master, slave, preferSlave]
+  description=Specifies what kind of server to connect
+tcpKeepAlive=false required=false
+  description=Enable or disable TCP keep-alive. The default is {@code false}.
+unknownLength=2147483647 required=false
+  description=Specifies the length to return for types of unknown length
+useSpnego=false required=false
+  description=Use SPNEGO in SSPI authentication requests
+user=null required=true
+  description=Username to connect to the database as.
+Count 57
+
+Process finished with exit code 0
