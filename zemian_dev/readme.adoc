@@ -1,5 +1,19 @@
 = Zemian notes on pgjdbc dev
 
+= JDBC how connection is made
+
+org.postgresql.Driver
+    makeConnection()
+        PgConnection()
+            ConnectionFactoryImpl.openConnectionImpl() -> QueryExecutor
+                enableSSL(PGStream) // Send SSL request packet if enabled
+                sendStartupPacket(PGStream) // Send the startup message
+                doAuthentication(PGStream) // Send password if needed
+                QueryExecutorImpl(PGStream) // readStartupMessages() - receive ReadyForQuery message
+
+                then query sent will be process by QueryExecutorImpl.processResults()
+
+
 = Setup PostgreSQL on Windows without admin rights
 
 1. Download zip version of Windows binaries
