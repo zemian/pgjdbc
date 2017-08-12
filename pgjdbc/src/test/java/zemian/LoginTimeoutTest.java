@@ -1,4 +1,4 @@
-package tmp;
+package zemian;
 
 import org.junit.Test;
 import org.postgresql.Driver;
